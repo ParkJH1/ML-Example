@@ -25,5 +25,7 @@ mse_y = np.array(mse_y)
 
 plt.figure(0)
 plt.plot(mse_x, mse_y, 'r-', label='minumum mean square error')
+plt.xlabel('slope')
+plt.ylabel('mse')
 plt.legend()
 plt.show()
