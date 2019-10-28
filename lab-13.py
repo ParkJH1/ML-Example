@@ -18,6 +18,6 @@ y = a * x_data + b
 
 plt.figure(0)
 plt.plot(x_data, y_data, 'ro', label='data')
-plt.plot(x_data, y, 'b-', label='y = ax')
+plt.plot(x_data, y, 'b-', label='y=ax+b')
 plt.legend()
 plt.show()
