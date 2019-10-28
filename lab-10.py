@@ -16,15 +16,15 @@ y_data = np.array([8, 24, 28, 46, 44, 55, 79, 80, 99, 105])
 mse_x = np.arange(-10, 30)
 mse_y = []
 
-a = np.sum(x_data * y_data) / np.sum(x_data ** 2)
-print(a)
-
 for slope in mse_x:
     y_predict = slope * x_data
     error = minumum_mean_square_error(y_predict, y_data)
     mse_y.append(error)
 
 mse_y = np.array(mse_y)
+
+a = np.sum(x_data * y_data) / np.sum(x_data ** 2)
+print(a)
 
 plt.figure(0)
 plt.plot(mse_x, mse_y, 'r-', label='minumum mean square error')
