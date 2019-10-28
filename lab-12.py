@@ -11,6 +11,6 @@ y = a * x_data
 
 plt.figure(0)
 plt.plot(x_data, y_data, 'ro', label='data')
-plt.plot(x_data, y, 'b-', label='y = ax')
+plt.plot(x_data, y, 'b-', label='y=ax')
 plt.legend()
 plt.show()
