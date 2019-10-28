@@ -21,25 +21,12 @@ mse_y = np.linspace(-7, 3, 100)
 mse_x, mse_y = np.meshgrid(mse_x, mse_y)
 mse_z = []
 
-A = np.sum(np.square(x_data))
-B = np.sum(x_data * y_data)
-C = np.sum(y_data)
-D = np.sum(x_data)
-
-b = (B - C * A / D) / (D - 10 * A / D)
-a = (C - 10 * b) / D
-print(a, b)
-
-p = np.polyfit(x_data, y_data, 1)
-print(p[0], p[1])
-
 for slope in mse_x[0]:
     tmp = []
     for intersect in mse_y:
         y_predict = slope * x_data + intersect[0]
         error = minumum_mean_square_error(y_predict, y_data)
         tmp.append(error)
-        print(slope, intersect[0], error)
     mse_z.append(tmp)
 
 mse_z = np.array(mse_z)
