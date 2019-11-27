@@ -28,4 +28,11 @@ with g.as_default() as graph:
             print('step', step, ': ', sess.run(cost, feed_dict={x: x_data, y: y_data}))
         sess.run(train, feed_dict={x: x_data, y: y_data})
 
-    print(sess.run(hypothesis, feed_dict={x: x_data}))
+    pred_y = sess.run(hypothesis, feed_dict={x: x_data})
+    print(pred_y)
+
+    plt.figure(0)
+    plt.plot(x_data, y_data, 'r.', label='data')
+    plt.plot(x_data, pred_y, 'b-', label='predict')
+    plt.legend()
+    plt.show()
