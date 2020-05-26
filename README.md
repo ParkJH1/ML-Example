@@ -8,28 +8,39 @@
   - matplotlib 3.1.1
   - tensorflow 2.0.0
 
+[Python 환경 구축 가이드](https://github.com/ParkJH1/Python-Tutorial/blob/master/README.md)
+
 
 
 ## 환경 설정
 
-- conda 환경 생성 및 활성화
+1. conda 환경 생성
 
 ```
 >>> conda create -n python-env python=3.6
+```
+
+
+
+2. conda 환경 활성화
+
+```
 >>> conda activate python-env
 ```
 
 
 
-- python 모듈 설치
+3. 프로젝트 경로로 이동
 
 ```
->>> pip install numpy==1.17.3
->>> pip install matplotlib==3.1.1
->>> pip install tensorflow==2.0.0
+>>> cd (프로젝트 경로)
+```
 
-혹은
 
+
+4. python 모듈 설치
+
+```
 >>> pip install -r requirements.txt
 ```
 
